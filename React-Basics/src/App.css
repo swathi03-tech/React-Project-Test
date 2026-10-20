@@ -1,0 +1,294 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #faf8fc;
+}
+
+.container {
+  width: 95%;
+  max-width: 1250px;
+  margin: auto;
+  padding: 25px 15px;
+  text-align: center;
+}
+
+h1 {
+  color: #795a9c;
+}
+
+.subtitle {
+  color: #888;
+  margin-bottom: 25px;
+}
+
+.search-box {
+  width: 350px;
+  max-width: 100%;
+  padding: 12px;
+  border: 1px solid #d5c4e7;
+  border-radius: 8px;
+  outline: none;
+  font-size: 15px;
+  margin-bottom: 25px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.card {
+  min-width: 0;
+  background: white;
+  padding: 12px;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: none;
+}
+
+.card:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+.card img {
+  display: block;
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.card h3 {
+  font-size: 15px;
+  color: #62487e;
+}
+
+.card p {
+  font-size: 13px;
+  color: #777;
+}
+
+.scientific {
+  font-style: italic;
+}
+
+.view-text {
+  display: block;
+  color: #795a9c;
+  font-size: 13px;
+  margin-top: 12px;
+}
+
+.no-image {
+  min-height: 190px;
+  background: #f4f0f8;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #8a789b;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+button {
+  padding: 10px 20px;
+  background: #9575b7;
+  color: white;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.page-loading {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.spinner {
+  width: 45px;
+  height: 45px;
+  border: 5px solid #e8dff0;
+  border-top: 5px solid #9575b7;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  margin: 15px auto;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.detail-card {
+  max-width: 650px;
+  margin: auto;
+  padding: 30px;
+  background: white;
+  border: 1px solid #eee;
+  border-radius: 15px;
+}
+
+.detail-image {
+  min-height: 300px;
+  background: #faf8fc;
+  border-radius: 10px;
+  margin: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.detail-image img {
+  width: 100%;
+  max-height: 450px;
+  object-fit: contain;
+}
+
+.back-btn {
+  display: block;
+  margin-bottom: 25px;
+}
+
+.error {
+  color: #c44;
+}
+
+.empty {
+  margin: 60px auto;
+  color: #777;
+}
+
+
+.error-page {
+  margin-top: 100px;
+  text-align: center;
+}
+
+.error-page h2 {
+  color: #c44;
+}
+
+.error-page p {
+  color: #777;
+  margin: 20px 0;
+}
+
+.error-page button {
+  margin-top: 15px;
+}
+
+@media (max-width: 850px) {
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 500px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+.add-butterfly-section {
+  max-width: 650px;
+  margin: 25px auto 30px;
+  padding: 25px;
+  background: #fff;
+  border: 1px solid #e8dff0;
+  border-radius: 12px;
+  text-align: left;
+}
+
+.add-butterfly-section h2 {
+  text-align: center;
+  color: #795a9c;
+  margin-top: 0;
+  margin-bottom: 22px;
+  font-size: 22px;
+}
+
+.butterfly-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.butterfly-form label {
+  color: #62487e;
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+.butterfly-form input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #d5c4e7;
+  border-radius: 7px;
+  font-size: 14px;
+  outline: none;
+  background: #fff;
+}
+
+.butterfly-form input:focus {
+  border-color: #9575b7;
+  box-shadow: 0 0 0 2px #f1eafa;
+}
+
+.butterfly-form button {
+  margin-top: 12px;
+}
+
+.form-success {
+  color: #27834a;
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.form-error {
+  color: #c44;
+  text-align: center;
+  font-size: 14px;
+}
+
+.gallery-count {
+  color: #888;
+  font-size: 14px;
+  margin: 0 0 20px;
+}
+
+.custom-label {
+  display: inline-block;
+  margin: 6px;
+  padding: 5px 9px;
+  background: #f1eafa;
+  color: #795a9c;
+  border-radius: 5px;
+  font-size: 12px;
+}
